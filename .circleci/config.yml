@@ -30,3 +30,7 @@ jobs:
       - run:
           name: Build
           command: npm run generate
+
+      - run:
+          name: Debug
+          command: ls -la; ls -la dist
