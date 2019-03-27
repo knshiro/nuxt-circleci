@@ -26,6 +26,17 @@
     "clean_theme": "cd shippio-blog-theme && rm -rf _nuxt",
     "generate:blog_theme": "npm run generate:production && npm run clean_theme && npm run remove_files_for_ghost_dist && cp -r dist/ shippio-blog-theme && cd shippio-blog-theme && npm run zip"
   },
+  "config": {},
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "last 2 version",
+    "IE 11"
+  ],
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
